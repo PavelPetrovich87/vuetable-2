@@ -80,13 +80,11 @@
                 @click="onDetailRowClick(item, itemIndex, $event)"
                 :class="onDetailRowClass(item, itemIndex)"
               >
-                <td :colspan="countVisibleFields">
-                  <component :is="detailRowComponent"
-                    :row-data="item"
-                    :row-index="itemIndex"
-                    :options="detailRowOptions"
-                  ></component>
-                </td>
+                <component :is="detailRowComponent"
+                           :row-data="item"
+                           :row-index="itemIndex"
+                           :options="detailRowOptions"
+                ></component>
               </tr>
             </transition>
           </template>
