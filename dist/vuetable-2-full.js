@@ -6856,21 +6856,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       attrs: {
         "name": _vm.detailRowTransition
       }
-    }, [(_vm.isVisibleDetailRow(item[_vm.trackBy])) ? _c('tr', {
-      class: _vm.onDetailRowClass(item, itemIndex),
-      on: {
-        "click": function($event) {
-          _vm.onDetailRowClick(item, itemIndex, $event)
-        }
-      }
-    }, [_c(_vm.detailRowComponent, {
+    }, [(_vm.isVisibleDetailRow(item[_vm.trackBy])) ? [_c(_vm.detailRowComponent, {
       tag: "component",
       attrs: {
         "row-data": item,
         "row-index": itemIndex,
         "options": _vm.detailRowOptions
       }
-    })], 1) : _vm._e()])] : _vm._e()]
+    })] : _vm._e()], 2)] : _vm._e()]
   }), _vm._v(" "), (_vm.displayEmptyDataRow) ? [_c('tr', [_c('td', {
     staticClass: "vuetable-empty-result",
     attrs: {
