@@ -85,6 +85,11 @@
                            :row-index="itemIndex"
                            :options="detailRowOptions"
                 ></component>
+                <component :is="comparisonRowComponent"
+                           :row-data="item"
+                           :row-index="itemIndex"
+                           :options="detailRowOptions"
+                ></component>
               </template>
             </transition>
           </template>
@@ -240,6 +245,10 @@ export default {
       default: ''
     },
     detailRowComponent: {
+      type: [String, Object],
+      default: ''
+    },
+    comparisonRowComponent: {
       type: [String, Object],
       default: ''
     },
