@@ -6867,7 +6867,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "row-index": itemIndex,
         "options": _vm.detailRowOptions
       }
-    }), _vm._v(" "), _c(_vm.comparisonRowComponent, {
+    }), _vm._v("\n              Details\n              "), _c(_vm.comparisonRowComponent, {
       tag: "component",
       attrs: {
         "row-data": item,

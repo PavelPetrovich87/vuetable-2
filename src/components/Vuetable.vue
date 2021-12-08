@@ -85,6 +85,7 @@
                            :row-index="itemIndex"
                            :options="detailRowOptions"
                 ></component>
+                Details
                 <component :is="comparisonRowComponent"
                            :row-data="item"
                            :row-index="itemIndex"
