@@ -6862,11 +6862,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "row-index": itemIndex,
         "options": _vm.detailRowOptions
       }
-    })] : _vm._e(), _vm._v(" "), (_vm.isVisibleDetailRow(item[_vm.trackBy])) ? [_c(_vm.detailRowComponent, {
+    }), _vm._v(" "), _c(_vm.comparisonRowComponent, {
       tag: "component",
       attrs: {
         "row-data": item,
-        "row-index": itemIndex + 1,
+        "row-index": itemIndex,
         "options": _vm.detailRowOptions
       }
     })] : _vm._e()] : _vm._e()]

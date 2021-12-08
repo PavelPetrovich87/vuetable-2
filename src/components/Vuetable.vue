@@ -75,7 +75,6 @@
             </template>
           </tr>
           <template v-if="useDetailRow">
-
               <template v-if="isVisibleDetailRow(item[trackBy])"
                 @click="onDetailRowClick(item, itemIndex, $event)"
                 :class="onDetailRowClass(item, itemIndex)"
@@ -85,18 +84,12 @@
                            :row-index="itemIndex"
                            :options="detailRowOptions"
                 ></component>
-              </template>
-              <template v-if="isVisibleDetailRow(item[trackBy])"
-                        @click="onDetailRowClick(item, itemIndex, $event)"
-                        :class="onDetailRowClass(item, itemIndex)"
-              >
-                <component :is="detailRowComponent"
+                <component :is="comparisonRowComponent"
                            :row-data="item"
-                           :row-index="itemIndex + 1"
+                           :row-index="itemIndex"
                            :options="detailRowOptions"
                 ></component>
               </template>
-
           </template>
         </template>
         <template v-if="displayEmptyDataRow">
