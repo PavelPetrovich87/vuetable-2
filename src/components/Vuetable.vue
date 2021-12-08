@@ -75,7 +75,7 @@
             </template>
           </tr>
           <template v-if="useDetailRow">
-            <transition :name="detailRowTransition" :key="itemIndex">
+
               <template v-if="isVisibleDetailRow(item[trackBy])"
                 @click="onDetailRowClick(item, itemIndex, $event)"
                 :class="onDetailRowClass(item, itemIndex)"
@@ -92,11 +92,11 @@
               >
                 <component :is="detailRowComponent"
                            :row-data="item"
-                           :row-index="itemIndex"
+                           :row-index="itemIndex + 1"
                            :options="detailRowOptions"
                 ></component>
               </template>
-            </transition>
+
           </template>
         </template>
         <template v-if="displayEmptyDataRow">

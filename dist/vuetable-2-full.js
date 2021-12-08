@@ -6855,12 +6855,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           }
         }
       })]] : _vm._e()]
-    })], 2), _vm._v(" "), (_vm.useDetailRow) ? [_c('transition', {
-      key: itemIndex,
-      attrs: {
-        "name": _vm.detailRowTransition
-      }
-    }, [(_vm.isVisibleDetailRow(item[_vm.trackBy])) ? [_c(_vm.detailRowComponent, {
+    })], 2), _vm._v(" "), (_vm.useDetailRow) ? [(_vm.isVisibleDetailRow(item[_vm.trackBy])) ? [_c(_vm.detailRowComponent, {
       tag: "component",
       attrs: {
         "row-data": item,
@@ -6871,10 +6866,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       tag: "component",
       attrs: {
         "row-data": item,
-        "row-index": itemIndex,
+        "row-index": itemIndex + 1,
         "options": _vm.detailRowOptions
       }
-    })] : _vm._e()], 2)] : _vm._e()]
+    })] : _vm._e()] : _vm._e()]
   }), _vm._v(" "), (_vm.displayEmptyDataRow) ? [_c('tr', [_c('td', {
     staticClass: "vuetable-empty-result",
     attrs: {
