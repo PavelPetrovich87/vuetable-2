@@ -3910,6 +3910,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       type: [String, Object],
       default: ''
     },
+    comparisonRowComponent: {
+      type: [String, Object],
+      default: ''
+    },
     detailRowTransition: {
       type: String,
       default: ''
@@ -6857,6 +6861,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "name": _vm.detailRowTransition
       }
     }, [(_vm.isVisibleDetailRow(item[_vm.trackBy])) ? [_c(_vm.detailRowComponent, {
+      tag: "component",
+      attrs: {
+        "row-data": item,
+        "row-index": itemIndex,
+        "options": _vm.detailRowOptions
+      }
+    }), _vm._v(" "), _c(_vm.comparisonRowComponent, {
       tag: "component",
       attrs: {
         "row-data": item,
