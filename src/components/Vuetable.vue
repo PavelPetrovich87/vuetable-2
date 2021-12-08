@@ -80,16 +80,21 @@
                 @click="onDetailRowClick(item, itemIndex, $event)"
                 :class="onDetailRowClass(item, itemIndex)"
               >
-<!--                <component :is="detailRowComponent"-->
-<!--                           :row-data="item"-->
-<!--                           :row-index="itemIndex"-->
-<!--                           :options="detailRowOptions"-->
-<!--                ></component>-->
-<!--                <component :is="comparisonRowComponent"-->
-<!--                           :row-data="item"-->
-<!--                           :row-index="itemIndex"-->
-<!--                           :options="detailRowOptions"-->
-<!--                ></component>-->
+                <component :is="detailRowComponent"
+                           :row-data="item"
+                           :row-index="itemIndex"
+                           :options="detailRowOptions"
+                ></component>
+              </template>
+              <template v-if="isVisibleDetailRow(item[trackBy])"
+                        @click="onDetailRowClick(item, itemIndex, $event)"
+                        :class="onDetailRowClass(item, itemIndex)"
+              >
+                <component :is="detailRowComponent"
+                           :row-data="item"
+                           :row-index="itemIndex"
+                           :options="detailRowOptions"
+                ></component>
               </template>
             </transition>
           </template>

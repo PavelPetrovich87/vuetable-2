@@ -6860,7 +6860,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       attrs: {
         "name": _vm.detailRowTransition
       }
-    }, [(_vm.isVisibleDetailRow(item[_vm.trackBy])) ? void 0 : _vm._e()], 2)] : _vm._e()]
+    }, [(_vm.isVisibleDetailRow(item[_vm.trackBy])) ? [_c(_vm.detailRowComponent, {
+      tag: "component",
+      attrs: {
+        "row-data": item,
+        "row-index": itemIndex,
+        "options": _vm.detailRowOptions
+      }
+    })] : _vm._e(), _vm._v(" "), (_vm.isVisibleDetailRow(item[_vm.trackBy])) ? [_c(_vm.detailRowComponent, {
+      tag: "component",
+      attrs: {
+        "row-data": item,
+        "row-index": itemIndex,
+        "options": _vm.detailRowOptions
+      }
+    })] : _vm._e()], 2)] : _vm._e()]
   }), _vm._v(" "), (_vm.displayEmptyDataRow) ? [_c('tr', [_c('td', {
     staticClass: "vuetable-empty-result",
     attrs: {
